@@ -51,13 +51,24 @@ def FindDuplicateNoSpace(arr):
 
     return newArr
 
+# First duplicate
+
+
+def FindDuplicateAlter(arr):
+    for i in arr:
+        if arr[abs(i)] < 0:
+            return abs(i)
+        else:
+            arr[abs(i)] *= -1
+
 
 if __name__ == "__main__":
     FindDuplicate = FindDuplicateHash
-    FindDuplicate = FindDuplicateNoSpace
+    # FindDuplicate = FindDuplicateNoSpace
+    FindDuplicate = FindDuplicateAlter
 
     arr = [1, 2, 7, 6, 3, 2, 7, 8]
-    uniqueArr = FindDuplicateHash(arr)
+    uniqueArr = FindDuplicate(arr)
 
 # https://leetcode.com/problems/find-the-duplicate-number/
 # Leetcode ans:
