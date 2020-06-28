@@ -1,8 +1,9 @@
 ## Title ##
-30 days DataStructure and Algorithm challenge
+30 days of Data structure and Algorithm challenges.
+Solving at least 1 challenge a day
 
-## Language ##
+## Programming Language ##
 Python
 
 ## TestCase check ##
-Link in file
+Leetcode : Find link in first line of file
