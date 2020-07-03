@@ -3,9 +3,6 @@ from dataStructure.linkedList import singlyLinkedList, Node
 
 
 class sLL(singlyLinkedList):
-    def __init(self):
-        super().__init__(self)
-
     def recur(self):
         cur = self.head
         if self.head == None or self.head.next == None:
