@@ -6,6 +6,13 @@ class Node():
     def __repr__(self):
         return f'{self.val}'
 
+    def displayTillEnd(self):
+        cur = self
+        ans = []
+        while cur:
+            ans.append(str(cur.val))
+            cur = cur.next
+        print(' -> '.join(ans))
 
 class singlyLinkedList():
     def __init__(self):
@@ -21,7 +28,6 @@ class singlyLinkedList():
             cur.next = Node(val, next)
 
     def __repr__(self):
-        global maxIter
         ans = []
         cur = self.head
         while cur:
@@ -31,3 +37,23 @@ class singlyLinkedList():
             return ' -> '.join(ans)
         else:
             return f'<empty>'
+
+    def __len__(self):
+        if self.head == None:
+            return 0
+        else:
+            count = 0
+            cur = self.head
+            while cur:
+                count += 1
+                cur = cur.next
+            return count
+
+    @staticmethod
+    def display(node):
+        cur = node
+        ans = []
+        while cur:
+            ans.append(str(cur.val))
+            cur = cur.next
+        print(' -> '.join(ans))
