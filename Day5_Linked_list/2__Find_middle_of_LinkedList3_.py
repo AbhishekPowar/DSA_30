@@ -30,12 +30,26 @@ def middleNode(head):
     ans = nthNode(head, n)
     return ans
 
+def twoPointer(head):
+    cur = head
+    slow = cur
+    fast = cur.next
+    while fast:
+        slow = slow.next
+        fast = fast.next
+        if fast:
+            fast=fast.next
+    return slow
+
+ 
+
 
 if __name__ == "__main__":
     ll = singlyLinkedList()
-    for i in range(1, 9):
+    for i in [1,2,3,4]:
         ll.add(i)
     mNode = middleNode(ll.head)
+    mNode = twoPointer(ll.head)
     mNode.displayTillEnd() 
 
      
