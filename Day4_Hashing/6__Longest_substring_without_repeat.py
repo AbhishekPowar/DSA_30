@@ -10,7 +10,7 @@
 from collections import defaultdict
 
 # O(n^2)
-
+ 
 
 def solve(string):
     hashset = len(set(string))
