@@ -12,13 +12,17 @@ class Node():
         while cur:
             ans.append(str(cur.val))
             cur = cur.next
-        print(' -> '.join(ans))
+        if ans:
+            print(' -> '.join(ans))
+        else:
+            print('<empty>')
+
 
 class singlyLinkedList():
     def __init__(self):
         self.head = None
 
-    def add(self, val, next=None):
+    def push(self, val, next=None):
         cur = self.head
         if cur == None:
             self.head = Node(val, next)
@@ -48,6 +52,24 @@ class singlyLinkedList():
                 count += 1
                 cur = cur.next
             return count
+
+    def pop(self):
+        if self.head:
+            if self.head.next == None:
+                self.head = None
+            else:
+                cur = self.head
+                while cur.next.next:
+                    cur = cur.next
+                last = cur.next
+                del last
+                cur.next = None
+
+    def delFirst(self):
+        if self.head:
+            cur = self.head
+            del cur
+            self.head = self.head.next
 
     @staticmethod
     def display(node):
