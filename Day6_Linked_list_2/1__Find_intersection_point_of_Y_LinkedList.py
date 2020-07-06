@@ -1,5 +1,4 @@
-# https://www.interviewbit.com/problems/intersection-of-linked-lists/
-# https://practice.geeksforgeeks.org/problems/intersection-point-in-y-shapped-linked-lists/1/
+# https://leetcode.com/problems/intersection-of-two-linked-lists/submissions/
 # 1__Find_intersection_point_of_Y_LinkedList
 
 from dataStructure.linkedList import singlyLinkedList as sLL
