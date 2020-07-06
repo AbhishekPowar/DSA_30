@@ -1,4 +1,4 @@
-# https://practice.geeksforgeeks.org/problems/check-if-linked-list-is-pallindrome/1
+# https://leetcode.com/problems/palindrome-linked-list/submissions/
 # 2__Check_if_a_LinkedList_is_palindrome_or_not_
 
 from dataStructure.linkedList import singlyLinkedList as sLL
