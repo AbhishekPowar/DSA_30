@@ -1,3 +1,6 @@
+maxElem = 20
+
+
 class Node():
     def __init__(self, val, next=None):
         self.val = val
@@ -7,9 +10,14 @@ class Node():
         return f'{self.val}'
 
     def displayTillEnd(self):
+        global maxElem
+
         cur = self
         ans = []
-        while cur:
+        maxIter = maxElem
+
+        while cur and maxIter:
+            maxIter -= 1
             ans.append(str(cur.val))
             cur = cur.next
         if ans:
@@ -32,9 +40,12 @@ class singlyLinkedList():
             cur.next = Node(val, next)
 
     def __repr__(self):
+        global maxElem
         ans = []
         cur = self.head
-        while cur:
+        maxIter = maxElem
+        while cur and maxIter:
+            maxIter -= 1
             ans.append(str(cur))
             cur = cur.next
         if len(ans):
