@@ -35,8 +35,10 @@ class Stack:
 
     def pop(self):
         if self.top > -1:
+            temp = self.dataArr[self.top]
             self.top -= 1
             self.len -= 1
+            return temp
         else:
             print("Stack empty")
             # raise Exception("Stack empty. Cannot pop")
@@ -54,6 +56,8 @@ class Stack:
     def print(self):
         print([self.dataArr[x] for x in range(0, self.top+1)])
 
+    def __str__(self):
+        return f'{[self.dataArr[x] for x in range(0, self.top+1)]}'
 
 if __name__ == "__main__":
     s = Stack(2, True)
