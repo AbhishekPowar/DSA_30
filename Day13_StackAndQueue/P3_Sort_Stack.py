@@ -1,6 +1,6 @@
 # Sort Stack
 
-from Stack_Using_Array import Stack
+from P1_Implement_Stack_Using_Array import Stack
 
 def SortStack(s):
     if s.length() > 1:
