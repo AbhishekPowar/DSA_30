@@ -65,12 +65,16 @@ class Queue:
     def print(self):
         print([self.dataArr[x] for x in range(self.start+1, self.end+1)])
 
+    def __repr__(self):
+        return f'{[self.dataArr[x] for x in range(self.start+1, self.end+1)]}'
+
 
 if __name__ == "__main__":
-    qu = Queue(size=2, isExpandable=False)
+    qu = Queue(size=4, isExpandable=False)
     print(f'isEmpty = {qu.isEmpty()}')
     qu.pop()
     print(f'getSize = {qu.getSize()}')
+
     [qu.push(x) for x in range(1, 5)]
     print(f'len = {len(qu)}')
     qu.pop()
